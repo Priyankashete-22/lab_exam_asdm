@@ -1,0 +1,25 @@
+<h2 class="header">List of products</h2>
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th style="width:200px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= 'let product of products; let i = index'>
+            <td>{{i+1}}</td>
+            <td>{{product.title}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td>
+                <button class="btn btn-sm btn-warning">Edit</button>
+                <button class="btn btn-sm btn-danger" style="margin: 10px ">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
